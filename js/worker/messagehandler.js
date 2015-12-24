@@ -59,6 +59,9 @@ onmessage = function(e) {
         return;
     }
 }
+if (typeof global != 'undefined') {
+	global.onmessage = onmessage;
+}
 
 Register("Abort", function(){run = false;});
 
